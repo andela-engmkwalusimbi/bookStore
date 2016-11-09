@@ -37,3 +37,7 @@ class ViewTests(TestCase):
         self.assertEqual(len(seachItem(self.category, 'Art')), 0)
         self.assertEqual(len(seachItem('Music', 'Art')), 0)
         self.assertEqual(len(seachItem('Music', self.title)), 1)
+
+    def test_book_listing(self):
+        response = self.client.get(reverse('book:list'))
+        self.assertEqual(response.status_code, 200)
