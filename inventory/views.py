@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 
 from .models import BookStore
 from .forms import BookForm
@@ -40,5 +40,5 @@ def seachItem(param, name):
     if param == 'category':
         result = BookStore.objects.filter(category__iexact=str(name))
     else:
-        result = BookStore.objects.filter(title__iexact=str(name))
+        result = BookStore.objects.filter(title__icontains=str(name))
     return result

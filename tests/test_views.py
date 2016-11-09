@@ -33,8 +33,8 @@ class ViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_search_item(self):
-        self.assertEqual(len(seachItem(self.category, 'Music')), 0)
-        self.assertEqual(len(seachItem(self.category, 'Art')), 0)
+        self.assertEqual(len(seachItem('category', 'Music')), 0)
+        self.assertEqual(len(seachItem('category', 'Art')), 1)
         self.assertEqual(len(seachItem('Music', 'Art')), 0)
         self.assertEqual(len(seachItem('Music', self.title)), 1)
 
