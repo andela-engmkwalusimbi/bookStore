@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        
+        {% include "search.html" %}
+        <br/>
+        {% for book in books %}
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">{{ book.title }}</h4>
+                    <p class="list-group-item-text">
+                        Author: {{ book.author }} <br/>
+                        Category: {{ book.category }}
+                    </p>
+                </a>
+            </div>
+        {% endfor %}
+
+        {% if not books %}
+            <p class="bg-danger">
+                {{ noResults }}
+            </p>
+        {% endif %}
+        
+    </div>
+{% endblock content %}

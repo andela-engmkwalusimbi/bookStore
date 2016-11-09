@@ -34,7 +34,7 @@ class BookStore(models.Model):
 
     def get_absolute_url(self):
         # After saving point the redirect to index page
-        return reverse('inventory:list')
+        return reverse('book:list')
 
     # Order results returned basing on the last record in the database
     class Meta:

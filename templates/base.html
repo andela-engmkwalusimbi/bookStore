@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+             <ul class="nav nav-pills">
+                <li role="presentation"><a href="{% url 'book:list' %}">Home</a></li>
+                <li role="presentation"><a href="{% url 'book:add' %}">Add new Book</a></li>
+            </ul>
+            <br/>
+            {% block content %}
+        
+            {% endblock content %}
+        </div>
+        </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

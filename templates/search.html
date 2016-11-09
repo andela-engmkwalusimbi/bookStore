@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<form action="" method="POST" class="form-inline">
+				{% csrf_token %}
+				<div class="form-group">
+					<input type="text" name="search_name" class="form-control" placeholder="Enter name or category">
+				</div>
+				<select name='category' class="form-control">
+            <option value="book">Book Name</option>
+            <option value="category">Category</option>
+        </select>
+				<input type="submit" class="btn btn-primary" value="Search">
+			</form>
+		</div>
+	</div>
+</div>
